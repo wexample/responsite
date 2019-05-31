@@ -1,0 +1,8 @@
+.single-button {
+    background : #000;
+}
+
+.single-button a {
+    background : white;
+    color      : black;
+}

@@ -58,19 +58,22 @@ function endblock()
     renderRecordStart();
 }
 
-function extend(string $name)
-{
+function serverFilePath($path) {
     global $renderPathTemplateCurrent;
 
-    if (substr($name, 0, 10) === 'template::')
+    if (substr($path, 0, 10) === 'template::')
     {
-        $path = SERVER_PATH_TEMPLATE . substr($name, 10) . '.php';
+        return SERVER_PATH_TEMPLATE . substr($path, 10) . '.php';
     }
     else
     {
-        $path = $renderPathTemplateCurrent . $name . '.php';
+        return $renderPathTemplateCurrent . $path . '.php';
     }
-    renderTemplate($path);
+}
+
+function extend(string $name)
+{
+    renderTemplate(serverFilePath($name));
 }
 
 function get(string $var)
@@ -92,7 +95,7 @@ function inc(string $path, $absolute = false)
     }
     else
     {
-        require $renderPathTemplateCurrent . $path . '.php';
+        require serverFilePath($path);
     }
 }
 

@@ -3,8 +3,8 @@ body {
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+    margin  : 0;
+    padding : 0;
 }
 
 li {
@@ -13,4 +13,15 @@ li {
 
 a {
     text-decoration : none;
+    color:#080;
+}
+
+section.landing .cta,
+.single-button a {
+    margin        : 10px;
+    display       : inline-block;
+    padding       : 15px 30px;
+    font-weight   : bold;
+    font-size     : 16px;
+    border-radius : 2px;
 }

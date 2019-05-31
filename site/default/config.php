@@ -50,8 +50,9 @@ $config = [
             ],
         ],
         [
-            'type' => 'single_button',
-            'data' => [
+            'id'       => 'lets_go',
+            'type'     => 'single_button',
+            'data'     => [
                 'title' => 'C\'est parti !',
                 'href'  => "javascript:app.section.modal.open('contact')",
             ],
