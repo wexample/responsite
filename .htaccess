@@ -1,0 +1,49 @@
+<IfModule mod_rewrite.c>
+  # -Multiviews => Disables the pattern matching based on filenames.
+  # -Indexes => Block access to directories without a default document.
+  Options -Indexes +FollowSymLinks -Multiviews
+
+  # For more information, see https://wiki.mozilla.org/Security/Guidelines/Web_Security#HTTP_Strict_Transport_Security
+  Header set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+  # Block pages from loading when they detect reflected XSS attacks
+  # For more information, see https://wiki.mozilla.org/Security/Guidelines/Web_Security#X-XSS-Protection
+  Header set X-XSS-Protection "1; mode=block"
+
+  # Content Security Policy ...
+  # - Prevents some extern scripts to do bad things with our site !
+  # - Prevents click jacking (attacks via iframes) but have a limitation 'cause it will not allow Google Images to use frames in the site... I would require a whitelist.
+  Header set Content-Security-Policy "default-src 'none'; connect-src 'self'; child-src 'self'; font-src 'self'; img-src 'self' data:; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self'; frame-ancestors 'self'; manifest-src 'self'"
+
+  # ----------------------------------------------------------------------
+  # | Reducing MIME type security risks                                  |
+  # ----------------------------------------------------------------------
+
+  # Prevent some browsers from MIME-sniffing the response.
+  #
+  # This reduces exposure to drive-by download attacks and cross-origin
+  # data leaks, and should be left uncommented, especially if the server
+  # is serving user-uploaded content or content that could potentially be
+  # treated as executable by the browser.
+  Header set X-Content-Type-Options "nosniff"
+
+  # Prevent Apache from adding a trailing footer line containing
+  # information about the server to the server-generated documents
+  # (e.g.: error messages, directory listings, etc.)
+  ServerSignature Off
+
+  SSLCipherSuite EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH
+
+  RewriteEngine on
+  # Redirect to default website.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/build/default/$1 -f
+  RewriteRule ^(.*)$ build/default/$1 [L]
+
+  # Redirect to the index page.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !^/build/default/
+  RewriteRule ^ index.php [QSA,L]
+</IfModule>

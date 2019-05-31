@@ -1,0 +1,1 @@
+<footer><?php block('content', true) ?></footer>

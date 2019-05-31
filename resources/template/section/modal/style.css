@@ -1,0 +1,25 @@
+.modal {
+    display: none;
+}
+
+.modal-inner,
+.modal-bg {
+    position:   absolute;
+    top:        0;
+    left:       0;
+    right:      0;
+    bottom:     0;
+    background: rgba(0, 0, 0, .8);
+}
+
+.modal-inner {
+    background: white;
+    margin:     20px;
+}
+
+.modal-close {
+    position: absolute;
+    margin:   20px;
+    top:      0;
+    right:    0;
+}

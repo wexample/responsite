@@ -1,0 +1,51 @@
+body {
+    margin:     0;
+    padding:    0;
+    background: black;
+}
+
+header {
+    background: #ddd;
+    padding:    20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear:   both;
+}
+
+.row .col {
+    float:              left;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+    padding:            0 0.75rem;
+    min-height:         1px;
+}
+
+.row .col.s12 {
+    width: 100%;
+}
+
+@media only screen and (min-width: 601px) {
+    .row .col.m3 {
+        width: 25%;
+    }
+}
+
+h1, h2 {
+    margin:  0;
+    padding: 0;
+}
+
+.btn {
+    border:                      none;
+    border-radius:               2px;
+    display:                     inline-block;
+    height:                      36px;
+    line-height:                 36px;
+    padding:                     0 16px;
+    text-transform:              uppercase;
+    vertical-align:              middle;
+    -webkit-tap-highlight-color: transparent;
+}
