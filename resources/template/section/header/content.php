@@ -1,10 +1,14 @@
 <header>
-    <?php if ($companyName) : ?>
-        <div class="companyName"><?= $companyName; ?></div>
-    <?php endif ?>
-    <?php if ($ctaTitle) : ?>
+    <div class="company">
+        <?php block('company'); ?>
+        <?= $company; ?>
+        <?php endblock(); ?>
+    </div>
+    <nav>
+        <?php block('nav'); ?>
         <a class="cta" href="<?= $ctaLink; ?>">
             <?= $ctaTitle; ?>
         </a>
-    <?php endif ?>
+        <?php endblock(); ?>
+    </nav>
 </header>

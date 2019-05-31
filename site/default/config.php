@@ -6,12 +6,9 @@ $config = [
     'rootSiteFallback' => false,
     'section'          => [
         [
-            'type' => 'header',
-            'data' => [
-                'companyName' => 'Respon.site',
-                'ctaLink'     => '#',
-                'ctaTitle'    => 'Télécharger Le Responzip',
-            ],
+            'id'       => 'header',
+            'type'     => 'header',
+            'template' => 'header/content',
         ],
         [
             'id'       => 'landing',

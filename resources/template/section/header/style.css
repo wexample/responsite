@@ -1,0 +1,13 @@
+header .company a {
+    color : black;
+}
+
+header .company .site {
+    color : #080;
+}
+
+header nav {
+    position: absolute;
+    right : 0;
+    top:0;
+}

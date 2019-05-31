@@ -5,6 +5,6 @@
     <?php endblock() ?>
 
     <?php block('cta') ?>
-    <a class="btn" href="<?= $ctaLink; ?>"><?= $ctaTitle; ?></a>
+    <a class="cta" href="<?= $ctaLink; ?>"><?= $ctaTitle; ?></a>
     <?php endblock() ?>
 </section>

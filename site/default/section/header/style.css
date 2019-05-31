@@ -1,0 +1,12 @@
+header {
+    background : white;
+}
+
+#github-link {
+    margin  : 15px;
+    display : block;
+}
+
+#github-link svg {
+    width : 40px;
+}
