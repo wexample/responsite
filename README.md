@@ -38,6 +38,7 @@
 
 ### Releases deployments  
 
+- API Documentation
 - Automated testing
 - Tests for site first installation
 - Code automated linting

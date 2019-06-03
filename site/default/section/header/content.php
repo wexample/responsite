@@ -6,10 +6,10 @@
 </a>
 <?php endblock(); ?>
 
-
 <?php block('nav'); ?>
 <ul>
     <li>
+        <span id="responsite-version"><?= RESPONSITE_VERSION ?></span>
         <a id="github-link" target="_blank" href="https://github.com/wexample/responsite">
             <?php inc('template::icon/responsite') ?>
         </a>

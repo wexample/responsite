@@ -7,7 +7,17 @@ header .company .site {
 }
 
 header nav {
-    position: absolute;
-    right : 0;
-    top:0;
+    position : absolute;
+    right    : 0;
+    top      : 0;
+}
+
+#responsite-version {
+    position : absolute;
+    right    : 72px;
+    top      : 28px;
+}
+
+#responsite-version:first-letter {
+    color : #080;
 }

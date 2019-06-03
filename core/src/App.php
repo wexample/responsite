@@ -3,6 +3,7 @@
 const SITE_ENV_DEV = 'dev';
 # TODO Make it contextual.
 const SITE_ENV = SITE_ENV_DEV;
+const RESPONSITE_VERSION = '1.0.0';
 
 class App
 {
