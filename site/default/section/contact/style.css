@@ -1,7 +1,22 @@
 .form-contact input,
 .form-contact textarea {
-    display: block;
-    margin:  20px auto;
-    padding: 10px 15px;
-    width:   40%;
+    display : block;
+    margin  : 20px auto;
+    padding : 10px 15px;
+    width   : 40%;
+    border  : 3px solid black;
+}
+
+.form-contact textarea {
+    height : 200px;
+}
+
+#contact .modal-inner {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+}
+
+#form-contact {
+    width : 100%;
 }

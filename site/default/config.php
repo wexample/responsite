@@ -3,7 +3,12 @@
 $config = [
     'name'             => 'Responsite | Respon.site',
     'metaDescription'  => 'Responsite | A responsive responsite site',
-    'rootSiteFallback' => false,
+    'rootSiteFallback' => true,
+    'admin'            => [
+        'tabs' => [
+            'contact' => 'Contacts',
+        ],
+    ],
     'section'          => [
         [
             'id'       => 'header',
@@ -27,22 +32,22 @@ $config = [
             'data' => [
                 'blocks' => [
                     [
-                        'icon'        => 'W',
+                        'icon'        => 'template::icon/coffee',
                         'title'       => 'Premier RDV gratuit',
                         'description' => 'Rencontrez un chef de projet pour définir vos objectifs et vous conseiller sur votre stratégie web.',
                     ],
                     [
-                        'icon'        => 'E',
+                        'icon'        => 'template::icon/clipboard',
                         'title'       => 'Atelier de co-construction',
                         'description' => 'site::section/features/workshop.php',
                     ],
                     [
-                        'icon'        => 'X',
+                        'icon'        => 'template::icon/edit-box',
                         'title'       => 'Design personnalisé',
                         'description' => 'Offrez-vous un design original, léger énergétiquement pour sublimer votre activité.',
                     ],
                     [
-                        'icon'        => '!',
+                        'icon'        => 'template::icon/code',
                         'title'       => 'Technologie Optimisée',
                         'description' => 'Faîtes le choix d’une technologie open source efficiente, solide et très bien documentée.',
                     ],
@@ -50,9 +55,9 @@ $config = [
             ],
         ],
         [
-            'id'       => 'lets_go',
-            'type'     => 'single_button',
-            'data'     => [
+            'id'   => 'lets_go',
+            'type' => 'single_button',
+            'data' => [
                 'title' => 'C\'est parti !',
                 'href'  => "javascript:app.section.modal.open('contact')",
             ],

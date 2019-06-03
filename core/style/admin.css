@@ -1,0 +1,443 @@
+
+html {
+    height : 100%;
+}
+
+body {
+    background  : black;
+    font-family : Helvetica, sans-serif;
+    color       : #cccccc;
+    margin      : 0;
+    height      : 100%;
+    display     : -ms-flexbox;
+    display     : -webkit-box;
+    display     : -moz-box;
+    display     : -ms-box;
+    display     : box;
+}
+
+a {
+    text-decoration : none;
+}
+
+ul {
+    list-style : none;
+    margin     : 0;
+    padding    : 0;
+}
+
+code {
+    border        : 1px solid #033;
+    color         : #088;
+    padding       : 2px 4px;
+    margin        : 0 2px;
+    border-radius : 4px;
+}
+
+b {
+    color : #088;
+}
+
+svg {
+    display : block;
+}
+
+#logo {
+    text-align    : center;
+    font-weight   : bold;
+    font-size     : 1.4rem;
+    margin-bottom : 20px;
+}
+
+#logo-wrapper {
+    margin : 0 60px;
+}
+
+.site-name {
+    font-family : Courier New, Ubuntu, sans-serif;
+}
+
+.site-name .site {
+    color : #080;
+}
+
+.layout-section {
+    display : flex;
+}
+
+#sidenav {
+    width        : 15rem;
+    background   : #001111;
+    border-right : 10px solid black;
+    padding-top  : 20px;
+}
+
+#sidenav ul li {
+    border-bottom : 1px solid black;
+}
+
+#sidenav ul li a {
+    display : block;
+    padding : 16px 25px;
+}
+
+#sidenav ul li:not(.sidebar-active) a {
+    color : #266;
+}
+
+.sidebar-active, #sidenav ul li a:hover {
+    background : #001515;
+}
+
+.sidebar-active a {
+    color       : #ccc;
+    font-weight : bold;
+}
+
+#sidenav ul li.separator {
+    padding    : 10px;
+    background : #003333;
+    color      : #001111;
+    text-align : right;
+}
+
+#page-content {
+    background       : #001111;
+    -ms-flex         : 1;
+    -webkit-box-flex : 1;
+    -moz-box-flex    : 1;
+    -ms-box-flex     : 1;
+    box-flex         : 1;
+    height           : 100%;
+}
+
+nav.tabs {
+    width : 100%;
+}
+
+nav.tabs li {
+    display : block;
+    float   : left;
+}
+
+nav.tabs li a {
+    display             : block;
+    padding             : 18px;
+    border              : 0 solid #002222;
+    border-bottom-width : 1px;
+    margin              : 0;
+}
+
+nav.tabs li a {
+    color : #266;
+}
+
+nav.tabs li:hover {
+    background : #002222;
+}
+
+nav.tabs:after {
+    content : '';
+    display : block;
+    clear   : both;
+}
+
+nav.tabs li.selected a {
+    border-width  : 1px;
+    border-bottom : 0;
+}
+
+.page-content-upper {
+    display : table-row;
+}
+
+.page-content-upper-inner {
+    margin : 20px 20px 0 20px;
+}
+
+.page-content-body {
+    display : table-row;
+    height  : 100%;
+}
+
+.page-content-body a {
+    color       : white;
+    font-weight : bold;
+}
+
+.page-content-body-inner {
+    padding : 20px;
+    height  : 100%;
+}
+
+.btn {
+    outline                     : 0;
+    text-decoration             : none;
+    color                       : #fff;
+    background-color            : #26a69a;
+    text-align                  : center;
+    letter-spacing              : .5px;
+    -webkit-transition          : background-color .2s ease-out;
+    transition                  : background-color .2s ease-out;
+    cursor                      : pointer;
+    margin                      : 6px 0;
+    border                      : none;
+    border-radius               : 2px;
+    display                     : inline-block;
+    height                      : 36px;
+    line-height                 : 36px;
+    padding                     : 0 16px;
+    text-transform              : uppercase;
+    vertical-align              : middle;
+    -webkit-tap-highlight-color : transparent;
+}
+
+#preview-frame {
+    width      : 100%;
+    height     : 100%;
+    display    : block;
+    border     : 0;
+    background : white;
+}
+
+#preview-frame iframe {
+    height : 100%;
+}
+
+form.respometer-form {
+    display       : inline-block;
+    margin-bottom : 20px;
+}
+
+label.respometer-form--label {
+    margin-right : 20px;
+}
+
+input.respometer-form--input {
+    height : 30px;
+}
+
+div.respometer {
+    border-radius : 10px;
+    width         : 500px;
+    height        : 40px;
+    background    : linear-gradient(to right, #c70100 0%, #080 100%);
+    position      : relative;
+    margin-top    : 40px;
+}
+
+div.respometer--our-site {
+    display     : inline-block;
+    position    : absolute;
+    right       : 20px;
+    bottom      : -45px;
+    padding-top : 10px;
+}
+
+div.respometer--our-site:after, div.respometer--our-site:before {
+    bottom         : 100%;
+    left           : 50%;
+    border         : solid transparent;
+    content        : " ";
+    height         : 0;
+    width          : 0;
+    position       : absolute;
+    pointer-events : none;
+}
+
+div.respometer--our-site:after {
+    border-color        : rgba(34, 102, 102, 0);
+    border-bottom-color : #266;
+    border-width        : 14px;
+    margin-left         : -14px;
+}
+
+div.respometer--our-site:before {
+    border-color        : rgba(204, 204, 204, 0);
+    border-bottom-color : #033;
+    border-width        : 15px;
+    margin-left         : -15px;
+}
+
+div.respometer--comparison {
+    display        : inline-block;
+    position       : absolute;
+    top            : -45px;
+    padding-bottom : 10px;
+}
+
+div.respometer--recommended-site {
+    right : 120px;
+}
+
+div.respometer--heavy-site {
+    left : 40px;
+}
+
+div.respometer--comparison:after, div.respometer--comparison:before {
+    top            : 100%;
+    left           : 50%;
+    border         : solid transparent;
+    content        : " ";
+    height         : 0;
+    width          : 0;
+    position       : absolute;
+    pointer-events : none;
+}
+
+div.respometer--comparison:after {
+    border-color     : rgba(34, 102, 102, 0);
+    border-top-color : #266;
+    border-width     : 14px;
+    margin-left      : -14px;
+}
+
+div.respometer--comparison:before {
+    border-color     : rgba(204, 204, 204, 0);
+    border-top-color : #033;
+    border-width     : 15px;
+    margin-left      : -15px;
+}
+
+#site-graph-respometer {
+    max-width : 900px;
+    margin    : 20px auto 20px;
+}
+
+#site-graph-respometer circle.unselected {
+    fill : #033;
+}
+
+#site-graph-respometer circle.selected {
+    stroke       : #fff;
+    stroke-width : 2px;
+    fill         : transparent;
+    box-shadow   : 2px 2px 2px rgba(255, 255, 255, .9);
+}
+
+#site-graph-respometer text {
+    fill        : #8ff;
+    border      : 2px solid red;
+    font-family : Verdana, Ubuntu, sans-serif;
+    font-size   : 12px;
+}
+
+#site-graph-hits {
+    position   : relative;
+    overflow   : hidden;
+    height     : 200px;
+    padding    : 20px;
+    background : #000909;
+}
+
+#site-graph-hits svg {
+    position : absolute;
+    float    : right;
+    right    : 20px;
+}
+
+#site-graph-hits svg .bar {
+    fill : #033;
+}
+
+.tip,
+.action-section {
+    display : flex;
+}
+
+.tip .icon {
+    padding    : 25px;
+    width      : 60px;
+    text-align : center;
+    fill       : #022;
+}
+
+.tip .desc,
+.action-section .desc {
+    padding-left : 0;
+    width        : 100%;
+}
+
+.action-section .action {
+    padding : 10px 15px;
+}
+
+.subsection {
+    border        : 1px solid #033;
+    margin-bottom : 15px;
+    color         : #055;
+}
+
+.subsection .desc {
+    padding : 15px;
+}
+
+.subsection h3 {
+    font-weight : normal;
+    color       : #9ff;
+    margin      : 0 0 10px;
+}
+
+#admin-welcome {
+    border  : 1px solid #044;
+    padding : 20px;
+    color   : #099;
+}
+
+@media only screen and (min-width : 601px) {
+    #page-content {
+        display : table;
+    }
+}
+
+@media only screen and (max-width : 601px) {
+    body {
+        display : initial;
+    }
+
+    .layout-section {
+        display : block;
+        width   : 100%;
+    }
+
+    #sidenav {
+        width        : auto;
+        border-right : 0;
+    }
+
+    #page-content {
+        display  : block;
+        overflow : hidden;
+        height   : initial;
+    }
+
+    .action-section {
+        display : block;
+    }
+
+    .action-section .action .btn {
+        width      : 100%;
+        box-sizing : border-box;
+    }
+
+    .tip {
+        display : block;
+    }
+
+    .tip .icon {
+        margin : 0 auto;
+        width  : 100px;
+    }
+
+    .subsection .desc {
+        padding    : 20px;
+        box-sizing : border-box;
+    }
+}
+
+#website-authors {
+    padding    : 20px;
+    font-size  : 12px;
+    color      : #066;
+    text-align : center;
+}

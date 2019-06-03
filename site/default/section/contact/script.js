@@ -1,21 +1,26 @@
-document
-  .getElementById('form-contact')
-  .addEventListener('submit', function (e) {
-    e.preventDefault();
+var form = document.getElementById('form-contact');
 
-    app.formPost(e.currentTarget, function (r) {
-      var message = '';
-      switch (r.responseText) {
-        case 'SENT':
-          message = 'Message envoyé ! Merci !';
-          app.section.modal.close('contact');
-          break;
-        case 'INCOMPLETE':
-          message = 'Le formulaire semble incomplet.';
-          break;
-        // Other cases are not triggering
-      }
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
 
-      message && alert(message);
-    });
+  app.formPost(e.currentTarget, function (r) {
+    var message = '';
+    switch (r.responseText) {
+      case 'SENT':
+        message = 'Message envoyé ! Merci !';
+
+        form.phone.value =
+        form.email.value =
+        form.message.value = '';
+
+        app.section.modal.close('contact');
+        break;
+      case 'INCOMPLETE':
+        message = 'Le formulaire semble incomplet.';
+        break;
+      // Other cases are not triggering
+    }
+
+    message && alert(message);
   });
+});
